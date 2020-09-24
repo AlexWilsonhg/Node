@@ -1,4 +1,5 @@
-from iNode import *
+from .iNode import iNode
+import numpy as np
 
 
 class Perceptron(iNode):

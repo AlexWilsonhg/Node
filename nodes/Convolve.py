@@ -1,4 +1,4 @@
-from iNode import *
+from .iNode import iNode
 from scipy import signal
 
 class Convolve(iNode):

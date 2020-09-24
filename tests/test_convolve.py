@@ -1,5 +1,5 @@
 import unittest
-from Convolve import Convolve	
+from nodes.Convolve import Convolve	
 import numpy as np
 
 class TestConvolve(unittest.TestCase):
