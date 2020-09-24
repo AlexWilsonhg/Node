@@ -8,5 +8,5 @@ class Perceptron(iNode):
 		self.biases = biases
 
 	def compute(self, inparam):
-		result = np.dot(inparam, self.weights.transpose())
+		result = np.dot(inparam, self.weights.transpose()) + self.biases
 		return result

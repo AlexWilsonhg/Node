@@ -9,16 +9,16 @@ class TestPerceptron(unittest.TestCase):
 
 		indata = np.array([1,5])
 		outdata = perceptron.compute(indata)
-		self.assertTrue(np.array_equal(outdata, [0.7,2.8]))
+		self.assertTrue(np.array_equal(outdata, [1.7,3.8]))
 
 		indata = np.array([5,1])
 		outdata = perceptron.compute(indata)
-		self.assertTrue(np.array_equal(outdata, [1.1,2.0]))
+		self.assertTrue(np.array_equal(outdata, [2.1,3.0]))
 
 		indata = np.array([-1,-1])
 		outdata = perceptron.compute(indata)
-		self.assertTrue(np.allclose(outdata, [-0.3,-0.8], 1e-10))
+		self.assertTrue(np.allclose(outdata, [0.7,0.2], 1e-10))
 
 		indata = np.array([0,0])
 		outdata = perceptron.compute(indata)
-		self.assertTrue(np.allclose(outdata, [0,0], 1e-10))
+		self.assertTrue(np.allclose(outdata, [1,1], 1e-10))
