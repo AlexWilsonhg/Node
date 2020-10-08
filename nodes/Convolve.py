@@ -10,9 +10,9 @@ class Convolve(iNode):
 
 	def compute(self, inparam):
 		if not self.keepdims:
-			mode = 'valid'
+			_mode = 'valid'
 		else:
-			mode = 'same'
+			_mode = 'same'
 
-		result = signal.fftconvolve(inparam, self.kernel, mode = 'valid')
+		result = signal.fftconvolve(inparam, self.kernel, mode = _mode)
 		return result
