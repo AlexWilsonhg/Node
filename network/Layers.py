@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+import skimage.measure
 from scipy import signal
 import numpy as np
 
@@ -67,7 +68,7 @@ class MaxPool(iNode):
 		self.stride = 2
 
 	def compute(self, inparam):
-		pass
+		return skimage.measure.block_reduce(inparam, (2,2), np.max)
 
 
 class Normalize(iNode):
