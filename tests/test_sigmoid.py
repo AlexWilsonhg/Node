@@ -1,5 +1,5 @@
 import unittest
-from nodes.Sigmoid import Sigmoid
+from network.Layers import Sigmoid
 import numpy as np
 
 class TestSigmoid(unittest.TestCase):

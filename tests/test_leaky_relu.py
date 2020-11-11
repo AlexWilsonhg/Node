@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from nodes.LeakyRelu import LeakyRelu
+from network.Layers import LeakyRelu
 
 class TestLeakyRelu(unittest.TestCase):
 

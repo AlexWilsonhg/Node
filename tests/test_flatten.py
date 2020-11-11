@@ -1,5 +1,5 @@
 import unittest
-from nodes.Flatten import Flatten
+from network.Layers import Flatten
 import numpy as np
 
 class TestFlatten(unittest.TestCase):

@@ -1,5 +1,5 @@
 import unittest
-from nodes.Normalize import Normalize
+from network.Layers import Normalize
 import numpy as np
 
 class TestNormalize(unittest.TestCase):

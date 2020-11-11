@@ -1,5 +1,5 @@
 import unittest
-from nodes.Convolve import Convolve	
+from network.Layers import Convolve	
 import numpy as np
 
 class TestConvolve(unittest.TestCase):

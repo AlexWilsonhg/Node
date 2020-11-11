@@ -1,5 +1,5 @@
 import unittest
-from nodes.Perceptron import Perceptron
+from network.Layers import Perceptron
 import numpy as np
 
 class TestPerceptron(unittest.TestCase):

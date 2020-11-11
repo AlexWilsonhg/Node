@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from nodes.Relu import Relu
+from network.Layers import Relu
 
 
 class TestRelu(unittest.TestCase):

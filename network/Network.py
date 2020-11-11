@@ -1,20 +1,19 @@
-from Perceptron import Pereptron
+from .Layers import *
 
 class Network():
 
 	def __init__(self):
-		self.nodes = []
-		self.nodes_to_be_computed = []
-		self.data = []
+		self.layers = []
 
-	def step(self):
-		pass
+	def compute(self, inparam):
 
-	def add_node(self, node_type):
-		pass
+		data = inparam
 
-	def remove_node(self, node_index):
-		pass
+		for layer in self.layers:
+			data = layer.compute(data)
 
-	def node_compute_ready(self, node):
-		pass
+
+		return data
+
+	def add_layer(self, layer):
+		self.layers.append(layer)

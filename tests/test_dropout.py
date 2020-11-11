@@ -1,5 +1,5 @@
 import unittest
-from nodes.Dropout import Dropout
+from network.Layers import Dropout
 import numpy as np
 
 class TestDropout(unittest.TestCase):

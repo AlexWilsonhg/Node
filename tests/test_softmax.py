@@ -1,5 +1,5 @@
 import unittest
-from nodes.Softmax import Softmax
+from network.Layers import Softmax
 import numpy as np
 
 class TestSoftmax(unittest.TestCase):
