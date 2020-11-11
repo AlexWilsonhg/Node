@@ -12,6 +12,16 @@ class iNode(ABC):
 	def compute(self):
 		pass
 
+		
+class AveragePool(iNode):
+
+	def __init__(self, stride = 2):
+		self.stride = stride
+
+	def compute(self, inparam):
+		return skimage.measure.block_reduce(inparam, (2,2), np.average)
+
+
 
 class Convolve(iNode):
 
