@@ -1,18 +1,19 @@
 from abc import ABC, abstractmethod
 import skimage.measure
 from scipy import signal
+from scipy.special import expit
 import numpy as np
 
 class iNode(ABC):
 
-	def __init__(self):	
+	def __init__(self):
 		pass
 
 	@abstractmethod
 	def compute(self):
 		pass
 
-		
+
 class AveragePool(iNode):
 
 	def __init__(self, stride = 2):
@@ -20,7 +21,6 @@ class AveragePool(iNode):
 
 	def compute(self, inparam):
 		return skimage.measure.block_reduce(inparam, (2,2), np.average)
-
 
 
 class Convolve(iNode):
@@ -47,7 +47,7 @@ class Dropout(iNode):
 
 
 	def compute(self, inparam):
-		mask = np.random.choice([0,1], size = inparam.shape, 
+		mask = np.random.choice([0,1], size = inparam.shape,
 								p = [self.dropout_rate, 1-self.dropout_rate])
 
 		return inparam * mask
@@ -126,7 +126,7 @@ class Sigmoid(iNode):
 		pass
 
 	def compute(self, inparam):
-		result = 1 / (1 + np.exp(-inparam))
+		result = expit(inparam)
 		return result
 
 
